@@ -11,8 +11,6 @@ function App() {
     const web3 = new Web3(window.ethereum);
     const rawBalance = await web3.eth.getBalance(walletAddress);
     const balance = web3.utils.fromWei(rawBalance);
-    console.log(walletAddress);
-    console.log("rawBalance", rawBalance, "balance", balance);
     setBalance(balance);
     setWeb3(web3);
   };
